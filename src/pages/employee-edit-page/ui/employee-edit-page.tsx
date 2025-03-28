@@ -108,10 +108,10 @@ export const EmployeeEditPage = () => {
             required
           />
           <Input
+            checked={formData.isArchive}
             type="checkbox"
-            value={formData.name}
             onChange={(e) =>
-              setFormData((item) => ({ ...item, email: e.target.checked }))
+              setFormData((item) => ({ ...item, isArchive: e.target.checked }))
             }
             id="isArchive"
             label="В архиве"
