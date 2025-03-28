@@ -10,7 +10,7 @@ export const AddNewEmployee = () => {
     birthday: "01.01.2024",
     isArchive: false,
     name: "Test_name",
-    phone: " +7 (111) 111-1111",
+    phone: "+7 (111) 111-1111",
     role: "cook",
   };
 
