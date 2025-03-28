@@ -1,0 +1,71 @@
+@use "../../styles/colors.scss";
+@use "../../styles/media-sizes.scss";
+
+.container {
+  padding: 16px 0px;
+
+  .input_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-wrap: nowrap;
+
+    input[type="checkbox"] {
+      flex: 0;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: #fff;
+      margin: 0;
+      font: inherit;
+      color: colors.$third-color;
+      width: 40px;
+      height: 40px;
+      border: 3px solid colors.$third-color;
+      display: grid;
+      place-content: center;
+
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 20px 20px colors.$third-color;
+      }
+
+      &:checked::before {
+        transform: scale(1);
+      }
+    }
+
+    @media screen and (min-width: media-sizes.$tablet) {
+      align-items: center;
+      gap: 30px;
+      flex-direction: row;
+    }
+
+    .label {
+      flex-basis: 40%;
+      color: colors.$fourth-color;
+      font-size: 20px;
+    }
+
+    .input {
+      flex-basis: 60%;
+
+      outline: none;
+      border: 3px solid colors.$third-color;
+      color: colors.$fourth-color;
+
+      padding: 10px;
+    }
+  }
+
+  .error {
+    color: red;
+    font-size: 16px;
+    float: right;
+  }
+}

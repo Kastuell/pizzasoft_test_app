@@ -1,0 +1,35 @@
+@use "../../../shared/styles/mixins.scss";
+@use "../../../shared/styles/colors.scss";
+@use "../../../shared/styles/media-sizes.scss";
+
+.container {
+  @include mixins.container;
+
+  .content {
+    margin: 0 auto;
+    background-color: colors.$secondary-color;
+    border-radius: 6px;
+    padding: 30px 20px;
+    font-size: 24px;
+
+    @media screen and (min-width: media-sizes.$desktop){
+      width: 60%;
+    }
+
+    a {
+      color: colors.$fourth-color;
+      font-weight: 600;
+      flex-flow: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}

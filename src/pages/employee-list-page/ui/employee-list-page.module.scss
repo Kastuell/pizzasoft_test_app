@@ -1,0 +1,26 @@
+@use "../../../shared/styles/mixins.scss";
+@use "../../../shared/styles/media-sizes.scss";
+
+.container {
+  @include mixins.container;
+}
+
+.employee_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 20px auto;
+  user-select: none;
+
+  @media screen and (min-width: media-sizes.$tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: media-sizes.$laptop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: media-sizes.$desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

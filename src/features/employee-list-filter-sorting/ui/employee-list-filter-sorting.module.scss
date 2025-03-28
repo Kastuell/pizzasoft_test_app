@@ -1,0 +1,27 @@
+@use "../../../shared/styles/media-sizes.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  justify-content: space-between;
+
+  @media screen and (min-width: media-sizes.$laptop) {
+    flex-direction: row;
+  }
+
+  .filter_wrapper,
+  .buttons_wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .buttons_wrapper {
+    flex-direction: column;
+    @media screen and (min-width: media-sizes.$laptop) {
+      flex-direction: row;
+    }
+  }
+}

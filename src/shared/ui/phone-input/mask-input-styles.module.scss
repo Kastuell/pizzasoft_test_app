@@ -1,0 +1,40 @@
+@use "../../styles/colors.scss";
+@use "../../styles/media-sizes.scss";
+
+.container {
+  padding: 16px 0px;
+
+  .input_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media screen and (min-width: media-sizes.$tablet) {
+      align-items: center;
+      gap: 30px;
+      flex-direction: row;
+    }
+
+    .label {
+      flex-basis: 40%;
+      color: colors.$fourth-color;
+      font-size: 20px;
+    }
+
+    .input {
+      flex-basis: 60%;
+
+      outline: none;
+      border: 3px solid colors.$third-color;
+      color: colors.$fourth-color;
+
+      padding: 10px;
+    }
+  }
+
+  .error {
+    color: red;
+    font-size: 16px;
+    float: right;
+  }
+}

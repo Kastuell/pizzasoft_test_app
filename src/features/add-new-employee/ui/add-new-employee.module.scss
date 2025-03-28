@@ -1,0 +1,23 @@
+@use "../../../shared/styles/colors.scss";
+
+.container {
+  height: 120px;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  color: colors.$fourth-color;
+  font-size: 18px;
+  font-weight: 500;
+  border: 2px solid white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border: 2px solid colors.$fourth-color;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    color: colors.$third-color;
+  }
+}
