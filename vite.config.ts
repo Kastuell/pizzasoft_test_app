@@ -10,7 +10,4 @@ export default defineConfig({
     include: ["**/*.spec.tsx", "**/*.spec.ts"],
     globals: true,
   },
-  build: {
-    outDir: "build",
-  },
 });
